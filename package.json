@@ -1,0 +1,59 @@
+{
+  "name": "ngnono-web-client-g",
+  "version": "0.0.1",
+  "description": "",
+  "homepage": "",
+  "author": {
+    "name": "lianghongpeng",
+    "email": "ngnono@gmail.com",
+    "url": "https://github.com/ngnono"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "index.js",
+  "keywords": [
+    ""
+  ],
+  "devDependencies": {
+    "babel-core": "^5.5.0",
+    "babel-eslint": "^4.1.6",
+    "chai": "^3.5.0",
+    "del": "^2.0.2",
+    "eslint-config-xo-space": "^0.7.0",
+    "eslint-plugin-babel": "^3.0.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.1.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-exclude-gitignore": "^1.0.0",
+    "gulp-istanbul": "^0.10.3",
+    "gulp-mocha": "^2.0.0",
+    "gulp-nsp": "^2.1.0",
+    "gulp-plumber": "^1.0.0",
+    "isparta": "^3.0.3",
+    "should": "^8.3.0"
+  },
+  "eslintConfig": {
+    "extends": "xo-space/esnext",
+    "env": {
+      "mocha": true
+    }
+  },
+  "repository": "ngnono/ngnono-web-client-g",
+  "scripts": {
+    "prepublish": "gulp prepublish",
+    "test": "mocha --harmony"
+  },
+  "license": "Apache-2.0",
+  "dependencies": {
+    "async": "^2.0.0-rc.3",
+    "debug": "^2.2.0",
+    "events": "^1.1.0",
+    "lodash": "^4.8.2",
+    "md5": "^2.1.0",
+    "qs": "^6.1.0",
+    "request": "^2.70.0",
+    "url": "^0.11.0",
+    "util": "^0.10.3"
+  }
+}
