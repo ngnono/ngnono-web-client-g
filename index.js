@@ -41,21 +41,23 @@ function _signSdkMiddleware(options, done) {
 
 
     let method = options.requestOptions.method.toUpperCase();
-    let pathAndQuery = url.parse(options.requestOptions.uri).path || '';
-    let q = qs.stringify(options.requestOptions.qs || {}, {encode: false}) || '';
-
+    let u = url.parse(options.requestOptions.uri);
+    let pathAndQuery = u.path || '';
+    let q = null;
     let qsArr = [];
-    //判断  path 是否有 ?
 
     qsArr.push(pathAndQuery);
-    if (q && pathAndQuery.indexOf('?') === -1) {
-        qsArr.push('?');
-    } else {
-        qsArr.push('&');
+
+    if (options.requestOptions.qs) {
+        q = qs.stringify(options.requestOptions.qs, {encode: false}) || null;
+
+        if(u.search){
+            qsArr.push('&')
+        } else{
+            qsArr.push('?');
+        }
+        qsArr.push(q);
     }
-
-    qsArr.push(q);
-
 
     let body;
 
@@ -63,7 +65,7 @@ function _signSdkMiddleware(options, done) {
         case 'PATCH':
         case 'POST':
         case 'PUT':
-            body = options.requestOptions.body || '';
+            body = JSON.stringify(options.requestOptions.body) || '';
             break;
         default :
             body = '';

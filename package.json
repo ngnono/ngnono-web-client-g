@@ -1,6 +1,6 @@
 {
   "name": "ngnono-web-client-g",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "homepage": "",
   "author": {
@@ -22,6 +22,7 @@
     "del": "^2.0.2",
     "eslint-config-xo-space": "^0.7.0",
     "eslint-plugin-babel": "^3.0.0",
+    "form-data": "^1.0.0-rc4",
     "gulp": "^3.9.0",
     "gulp-babel": "^5.1.0",
     "gulp-eslint": "^1.0.0",
@@ -47,10 +48,12 @@
   "license": "Apache-2.0",
   "dependencies": {
     "async": "^2.0.0-rc.3",
+    "config": "^1.20.1",
     "debug": "^2.2.0",
     "events": "^1.1.0",
     "lodash": "^4.8.2",
     "md5": "^2.1.0",
+    "promise": "^7.1.1",
     "qs": "^6.1.0",
     "request": "^2.70.0",
     "url": "^0.11.0",

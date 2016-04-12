@@ -1,0 +1,10 @@
+#
+sdk:
+  consumerKey: 'xxxxdefault'
+  secretKey: '998998'
+  baseUrl: 'http://192.168.18.31:8080/api'
+
+sdk-route:
+  'sign.testGet':
+    uri: '/sign/testGet'
+    method: 'GET'

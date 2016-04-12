@@ -1,0 +1,7 @@
+#
+sdk:
+  consumerKey: 'AppH5V01'
+  secretKey: '998998'
+  baseUrl: 'http://192.168.18.31:8080/api'
+
+
