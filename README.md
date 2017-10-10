@@ -142,7 +142,9 @@ $ npm install --save ngnono-web-client-g
 
 ```
 
+## 核心代码说明
 
+sdk copy from [li-sdk](https://github.com/liangyali/li-sdk)
 
 ## License
 
